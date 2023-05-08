@@ -1,0 +1,15 @@
+@import "../../../styles/base/variables";
+@import "../../../styles/base/helpers";
+
+.nav {
+  @include flex-layout();
+  justify-content: space-between;
+
+  padding: 0.5rem 1rem;
+
+  background-color: $primary-light;
+
+  &--title {
+    font-size: 1.25rem;
+  }
+}
