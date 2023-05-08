@@ -1,0 +1,31 @@
+@import "../../../styles//base/variables";
+@import "../../../styles/base/helpers";
+
+.course-card {
+  height: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem 0.25rem rgba($color: $primary-dark, $alpha: 0.2);
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .details-container {
+    padding: 1rem;
+
+    .description {
+      margin: 1rem 0;
+    }
+
+    .info-container {
+      @include flex-layout($justify-content: space-between);
+
+      margin-bottom: 1.5rem;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      background-color: rgba($color: $primary-accent, $alpha: 0.12);
+    }
+  }
+}

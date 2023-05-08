@@ -1,1 +1,13 @@
-<p>course-card works!</p>
+<div class="course-card">
+  <img class="image" [src]="course.iconUrl" [alt]="course.description" />
+  <div class="details-container">
+    <h2 class="description">{{ course.description }}</h2>
+    <div class="info-container">
+      <span class="category">{{ course.category | titlecase }}</span>
+      <ng-container *ngIf="course.lessonsCount" class="lesson-count">
+        Lessons: {{ course.lessonsCount }}
+      </ng-container>
+    </div>
+    <p class="long-description">{{ course.longDescription }}</p>
+  </div>
+</div>
