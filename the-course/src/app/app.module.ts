@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from '@/app/app-routing.module';
+
 import { AppComponent } from '@/app/app.component';
 import { CourseCardComponent } from '@/components/course-card/course-card.component';
 import { ButtonComponent } from '@/components/button/button.component';
@@ -16,7 +18,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     CourseListComponent,
     NavigationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
