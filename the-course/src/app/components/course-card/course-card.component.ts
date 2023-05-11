@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class CourseCardComponent {
   @Input() course: Course;
+
+  buttonClass: string = 'primary-btn';
+
+  handleClick() {
+    console.log('Button Clicked!');
+  }
 }

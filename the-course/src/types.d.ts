@@ -5,4 +5,5 @@ type Course = {
   longDescription: string;
   lessonsCount?: number;
   category: string;
+  price: number;
 };

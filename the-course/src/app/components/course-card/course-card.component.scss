@@ -12,11 +12,22 @@
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
+  .no-image-placeholder {
+    @include flex-layout();
+
+    width: 100%;
+    height: 200px;
+    border: 1px solid $primary-dark;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
   .details-container {
     padding: 1rem;
 
-    .description {
-      margin: 1rem 0;
+    .description-container {
+      @include flex-layout($justify-content: space-between);
+
+      margin: 1.5rem 0;
     }
 
     .info-container {
@@ -25,7 +36,14 @@
       margin-bottom: 1.5rem;
       padding: 0.5rem;
       border-radius: 0.25rem;
-      background-color: rgba($color: $primary-accent, $alpha: 0.12);
+      background-color: rgba($color: $secondary-dark, $alpha: 0.05);
+    }
+
+    .view-course-button {
+      @include flex-layout();
+
+      width: 100%;
+      margin-top: 2rem;
     }
   }
 }

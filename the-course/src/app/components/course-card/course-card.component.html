@@ -1,7 +1,20 @@
 <div class="course-card">
-  <img class="image" [src]="course.iconUrl" [alt]="course.description" />
+  <img
+    *ngIf="course.iconUrl; else noImagePlaceholder"
+    class="image"
+    [src]="course.iconUrl"
+    [alt]="course.description"
+  />
+  <ng-template #noImagePlaceholder>
+    <div class="no-image-placeholder">No Image Available!</div>
+  </ng-template>
   <div class="details-container">
-    <h2 class="description">{{ course.description }}</h2>
+    <div class="description-container">
+      <h2 class="description">{{ course.description }}</h2>
+      <span *ngIf="course.price">
+        {{ course.price | number : "1.0-2" | currency }}
+      </span>
+    </div>
     <div class="info-container">
       <span class="category">{{ course.category | titlecase }}</span>
       <ng-container *ngIf="course.lessonsCount" class="lesson-count">
@@ -9,5 +22,12 @@
       </ng-container>
     </div>
     <p class="long-description">{{ course.longDescription }}</p>
+    <div class="view-course-button">
+      <app-button
+        label="View Course"
+        [buttonClass]="buttonClass"
+        (clickEvent)="handleClick()"
+      />
+    </div>
   </div>
 </div>
