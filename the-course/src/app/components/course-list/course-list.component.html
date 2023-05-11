@@ -1,6 +1,7 @@
 <section class="course-list">
-  <app-course-card
-    *ngFor="let course of courses | async"
-    [course]="course"
-  ></app-course-card>
+  <app-course-card *ngFor="let course of courses | async" [course]="course">
+    <app-sale-banner
+      *ngIf="course.lessonsCount && course.lessonsCount < 15"
+    ></app-sale-banner>
+  </app-course-card>
 </section>

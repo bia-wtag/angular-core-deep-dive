@@ -9,6 +9,7 @@ import { CourseCardComponent } from '@/components/course-card/course-card.compon
 import { ButtonComponent } from '@/components/button/button.component';
 import { CourseListComponent } from '@/components/course-list/course-list.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { SaleBannerComponent } from './components/sale-banner/sale-banner.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     ButtonComponent,
     CourseListComponent,
     NavigationComponent,
+    SaleBannerComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

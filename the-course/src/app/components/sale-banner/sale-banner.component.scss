@@ -1,0 +1,12 @@
+@import "../../../styles//base/variables";
+@import "../../../styles/base/helpers";
+
+.sale-banner-container {
+  color: $primary-light;
+  width: 95%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: $primary-accent;
+}
