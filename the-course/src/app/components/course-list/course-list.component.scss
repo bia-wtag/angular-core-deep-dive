@@ -1,3 +1,6 @@
+@import "../../../styles//base/variables";
+@import "../../../styles/base/helpers";
+
 .course-list {
   width: 100%;
   max-width: 64rem;
@@ -7,4 +10,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1rem;
+}
+
+.no-image-placeholder {
+  @include flex-layout();
+
+  width: 100%;
+  height: 200px;
+  border: 1px solid $primary-dark;
+  border-radius: 0.5rem 0.5rem 0 0;
 }

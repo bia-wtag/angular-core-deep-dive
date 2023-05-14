@@ -12,15 +12,6 @@
     border-radius: 0.5rem 0.5rem 0 0;
   }
 
-  .no-image-placeholder {
-    @include flex-layout();
-
-    width: 100%;
-    height: 200px;
-    border: 1px solid $primary-dark;
-    border-radius: 0.5rem 0.5rem 0 0;
-  }
-
   .details-container {
     padding: 1rem;
 

@@ -1,4 +1,4 @@
-import { Component, ContentChild, Input } from '@angular/core';
+import { Component, ContentChild, Input, TemplateRef } from '@angular/core';
 import { SaleBannerComponent } from '../sale-banner/sale-banner.component';
 
 @Component({
@@ -8,6 +8,7 @@ import { SaleBannerComponent } from '../sale-banner/sale-banner.component';
 })
 export class CourseCardComponent {
   @Input() course: Course;
+  @Input() noImageTemplate: TemplateRef<any>;
 
   // works similar to ViewChild but for contents
   @ContentChild(SaleBannerComponent)

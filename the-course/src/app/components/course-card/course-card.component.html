@@ -6,7 +6,13 @@
     [alt]="course.description"
   />
   <ng-template #noImagePlaceholder>
-    <div class="no-image-placeholder">No Image Available!</div>
+    <ng-container
+      *ngTemplateOutlet="
+        noImageTemplate;
+        context: { courseDescription: course.description }
+      "
+    >
+    </ng-container>
   </ng-template>
   <ng-content select="app-sale-banner>"></ng-content>
   <div class="details-container">

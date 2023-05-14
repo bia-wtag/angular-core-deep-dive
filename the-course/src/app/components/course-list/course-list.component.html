@@ -1,5 +1,14 @@
 <section class="course-list">
-  <app-course-card *ngFor="let course of courses | async" [course]="course">
+  <ng-template #noImagePlaceholder let-courseName="courseDescription">
+    <div class="no-image-placeholder">
+      No Image Available for {{ courseName }}!
+    </div>
+  </ng-template>
+  <app-course-card
+    *ngFor="let course of courses | async"
+    [course]="course"
+    [noImageTemplate]="noImagePlaceholder"
+  >
     <app-sale-banner
       *ngIf="course.lessonsCount && course.lessonsCount < 15"
     ></app-sale-banner>
