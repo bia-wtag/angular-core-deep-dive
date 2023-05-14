@@ -10,6 +10,7 @@ import { ButtonComponent } from '@/components/button/button.component';
 import { CourseListComponent } from '@/components/course-list/course-list.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SaleBannerComponent } from './components/sale-banner/sale-banner.component';
+import { HighlightedDirective } from './directives/highlighted.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SaleBannerComponent } from './components/sale-banner/sale-banner.compon
     CourseListComponent,
     NavigationComponent,
     SaleBannerComponent,
+    HighlightedDirective,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

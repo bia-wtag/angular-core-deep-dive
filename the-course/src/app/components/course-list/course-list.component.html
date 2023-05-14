@@ -5,9 +5,10 @@
     </div>
   </ng-template>
   <app-course-card
-    *ngFor="let course of courses | async"
+    *ngFor="let course of courses | async; first as isFirst"
     [course]="course"
     [noImageTemplate]="noImagePlaceholder"
+    [isFirst]="isFirst"
   >
     <app-sale-banner
       *ngIf="course.lessonsCount && course.lessonsCount < 15"

@@ -1,4 +1,9 @@
-<div class="course-card">
+<div
+  class="course-card"
+  [appHighlighted]="isFirst"
+  #highlighter="hl"
+  (toggleHighlight)="onToggleHighlight()"
+>
   <img
     *ngIf="course.iconUrl; else noImagePlaceholder"
     class="image"
@@ -17,7 +22,9 @@
   <ng-content select="app-sale-banner>"></ng-content>
   <div class="details-container">
     <div class="description-container">
-      <h2 class="description">{{ course.description }}</h2>
+      <h2 class="description" (dblclick)="highlighter.toggle()">
+        {{ course.description }}
+      </h2>
       <span *ngIf="course.price">
         {{ course.price | number : "1.0-2" | currency }}
       </span>

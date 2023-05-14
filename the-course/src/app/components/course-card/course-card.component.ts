@@ -8,6 +8,7 @@ import { SaleBannerComponent } from '../sale-banner/sale-banner.component';
 })
 export class CourseCardComponent {
   @Input() course: Course;
+  @Input() isFirst: boolean;
   @Input() noImageTemplate: TemplateRef<any>;
 
   // works similar to ViewChild but for contents
@@ -18,6 +19,10 @@ export class CourseCardComponent {
 
   handleClick() {
     console.log('Button Clicked!');
+  }
+
+  onToggleHighlight() {
+    console.log('Highlight Toggled!');
   }
 
   ngAfterContentInit() {
