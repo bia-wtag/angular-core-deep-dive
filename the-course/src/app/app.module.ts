@@ -11,6 +11,7 @@ import { CourseListComponent } from '@/components/course-list/course-list.compon
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SaleBannerComponent } from './components/sale-banner/sale-banner.component';
 import { HighlightedDirective } from './directives/highlighted.directive';
+import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HighlightedDirective } from './directives/highlighted.directive';
     NavigationComponent,
     SaleBannerComponent,
     HighlightedDirective,
+    NgxUnlessDirective,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

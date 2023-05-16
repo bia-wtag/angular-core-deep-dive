@@ -26,6 +26,7 @@ export class HighlightedDirective {
     this.isHighLighted = newIsHighlighted;
     this.toggleHighlight.emit(this.isHighLighted);
   }
+
   toggle() {
     this.isHighLighted = !this.isHighLighted;
   }
@@ -34,6 +35,7 @@ export class HighlightedDirective {
   mouseOverEvent() {
     this.mouseEvent(true);
   }
+
   @HostListener('mouseleave', ['$event'])
   mouseLeaveEvent() {
     this.mouseEvent(false);

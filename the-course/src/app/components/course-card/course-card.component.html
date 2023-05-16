@@ -31,9 +31,9 @@
     </div>
     <div class="info-container">
       <span class="category">{{ course.category | titlecase }}</span>
-      <ng-container *ngIf="course.lessonsCount" class="lesson-count">
+      <p *appNgxUnless="course.lessonsCount" class="lesson-count">
         Lessons: {{ course.lessonsCount }}
-      </ng-container>
+      </p>
     </div>
     <p class="long-description">{{ course.longDescription }}</p>
     <div class="view-course-button">
